@@ -4,6 +4,8 @@
 
 > All it takes is a little push
 
+>This is a fork of arthurealike/vim-J withe the background removed so it's transparent
+
  ## Installation
 
  Just copy colors/joker.vim to ~/.vim/colors or
