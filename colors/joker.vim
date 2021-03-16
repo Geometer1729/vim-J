@@ -2,7 +2,7 @@
 " Author:      arthurealike (thefresharthure@yahoo.com)
 " Webpage:     github.com/arthurealike/vim-J
 " Description: Why so serious?
-" Last Change: 2021-02-17
+" Last Change: 2021-03-15
 
 hi clear
 
@@ -24,7 +24,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Special ctermbg=NONE ctermfg=46 cterm=NONE guibg=NONE guifg=#58FF1E gui=NONE
     hi Statement ctermbg=NONE ctermfg=46 cterm=NONE guibg=NONE guifg=#58FF1E gui=NONE
     hi String ctermbg=NONE ctermfg=226 cterm=NONE guibg=NONE guifg=#ffff00 gui=NONE
-    hi Todo ctermbg=196 ctermfg=232 cterm=NONE guibg=#ff0000 guifg=#121212 gui=NONE
+    hi Todo ctermbg=196 ctermfg=none cterm=NONE guibg=#ff0000 guifg=NONE gui=NONE
     hi Type ctermbg=NONE ctermfg=46 cterm=NONE guibg=NONE guifg=#58FF1E gui=NONE
     hi Underlined ctermbg=NONE ctermfg=46 cterm=NONE guibg=NONE guifg=#58FF1E gui=NONE
     hi StatusLine ctermbg=NONE ctermfg=98 cterm=NONE guibg=NONE guifg=#bd93f9 gui=NONE
@@ -32,8 +32,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi VertSplit ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi TabLine ctermbg=NONE ctermfg=98 cterm=NONE guibg=NONE guifg=#bd93f9 gui=NONE
     hi TabLineFill ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
-    hi TabLineSel ctermbg=98 ctermfg=232 cterm=NONE guibg=#bd93f9 guifg=#121212 gui=NONE
-    hi Title ctermbg=98 ctermfg=232 cterm=NONE guibg=#bd93f9 guifg=#121212 gui=NONE
+    hi TabLineSel ctermbg=98 ctermfg=none cterm=NONE guibg=#bd93f9 guifg=NONE gui=NONE
+    hi Title ctermbg=98 ctermfg=none cterm=NONE guibg=#bd93f9 guifg=NONE gui=NONE
     hi CursorLine ctermbg=246 ctermfg=NONE cterm=NONE guibg=#4e4e4e guifg=NONE gui=NONE
     hi LineNr ctermbg=NONE ctermfg=98 cterm=NONE guibg=NONE guifg=#bd93f9 gui=NONE
     hi CursorLineNr ctermbg=NONE ctermfg=46 cterm=NONE guibg=NONE guifg=#58FF1E gui=NONE
@@ -46,15 +46,15 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi PmenuSel ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi PmenuThumb ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi FoldColumn ctermbg=NONE ctermfg=46 cterm=NONE guibg=NONE guifg=#58FF1E gui=NONE
-    hi Folded ctermbg=98 ctermfg=232 cterm=NONE guibg=#bd93f9 guifg=#121212 gui=NONE
-    hi WildMenu ctermbg=98 ctermfg=232 cterm=NONE guibg=#bd93f9 guifg=#121212 gui=NONE
+    hi Folded ctermbg=98 ctermfg=none cterm=NONE guibg=#bd93f9 guifg=NONE gui=NONE
+    hi WildMenu ctermbg=98 ctermfg=none cterm=NONE guibg=#bd93f9 guifg=NONE gui=NONE
     hi SpecialKey ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
-    hi DiffAdd ctermbg=46 ctermfg=232 cterm=NONE guibg=#58FF1E guifg=#121212 gui=NONE
-    hi DiffChange ctermbg=208 ctermfg=232 cterm=NONE guibg=#FF8B00 guifg=#121212 gui=NONE
+    hi DiffAdd ctermbg=46 ctermfg=none cterm=NONE guibg=#58FF1E guifg=NONE gui=NONE
+    hi DiffChange ctermbg=208 ctermfg=none cterm=NONE guibg=#FF8B00 guifg=NONE gui=NONE
     hi DiffDelete ctermbg=196 ctermfg=15 cterm=NONE guibg=#ff0000 guifg=#d7d4cd gui=NONE
     hi DiffText ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi IncSearch ctermbg=46 ctermfg=0 cterm=NONE guibg=#58FF1E guifg=#000000 gui=NONE
-    hi Search ctermbg=98 ctermfg=232 cterm=NONE guibg=#bd93f9 guifg=#121212 gui=NONE
+    hi Search ctermbg=98 ctermfg=none cterm=NONE guibg=#bd93f9 guifg=NONE gui=NONE
     hi Directory ctermbg=NONE ctermfg=98 cterm=NONE guibg=NONE guifg=#bd93f9 gui=NONE
     hi MatchParen ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE guisp=#ff0000
@@ -64,7 +64,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi ColorColumn ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi ErrorMsg ctermbg=NONE ctermfg=196 cterm=NONE guibg=NONE guifg=#ff0000 gui=NONE
-    hi ModeMsg ctermbg=98 ctermfg=232 cterm=NONE guibg=#bd93f9 guifg=#121212 gui=NONE
+    hi ModeMsg ctermbg=98 ctermfg=none cterm=NONE guibg=#bd93f9 guifg=NONE gui=NONE
     hi MoreMsg ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi Question ctermbg=NONE ctermfg=15 cterm=NONE guibg=NONE guifg=#d7d4cd gui=NONE
     hi Cursor ctermbg=15 ctermfg=15 cterm=NONE guibg=#d7d4cd guifg=#d7d4cd gui=NONE
@@ -90,7 +90,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Special ctermbg=NONE ctermfg=jgreen cterm=NONE
     hi Statement ctermbg=NONE ctermfg=jgreen cterm=NONE
     hi String ctermbg=NONE ctermfg=jyellow cterm=NONE
-    hi Todo ctermbg=jred ctermfg=jblack cterm=NONE
+    hi Todo ctermbg=jred ctermfg=NONE cterm=NONE
     hi Type ctermbg=NONE ctermfg=jgreen cterm=NONE
     hi Underlined ctermbg=NONE ctermfg=jgreen cterm=NONE
     hi StatusLine ctermbg=NONE ctermfg=jpurple cterm=NONE
@@ -98,8 +98,8 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi VertSplit ctermbg=NONE ctermfg=white cterm=NONE
     hi TabLine ctermbg=NONE ctermfg=jpurple cterm=NONE
     hi TabLineFill ctermbg=NONE ctermfg=white cterm=NONE
-    hi TabLineSel ctermbg=jpurple ctermfg=jblack cterm=NONE
-    hi Title ctermbg=jpurple ctermfg=jblack cterm=NONE
+    hi TabLineSel ctermbg=jpurple ctermfg=NONE cterm=NONE
+    hi Title ctermbg=jpurple ctermfg=NONE cterm=NONE
     hi CursorLine ctermbg=jgray ctermfg=NONE cterm=NONE
     hi LineNr ctermbg=NONE ctermfg=jpurple cterm=NONE
     hi CursorLineNr ctermbg=NONE ctermfg=jgreen cterm=NONE
@@ -112,15 +112,15 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi PmenuSel ctermbg=NONE ctermfg=white cterm=NONE
     hi PmenuThumb ctermbg=NONE ctermfg=white cterm=NONE
     hi FoldColumn ctermbg=NONE ctermfg=jgreen cterm=NONE
-    hi Folded ctermbg=jpurple ctermfg=jblack cterm=NONE
-    hi WildMenu ctermbg=jpurple ctermfg=jblack cterm=NONE
+    hi Folded ctermbg=jpurple ctermfg=NONE cterm=NONE
+    hi WildMenu ctermbg=jpurple ctermfg=NONE cterm=NONE
     hi SpecialKey ctermbg=NONE ctermfg=white cterm=NONE
-    hi DiffAdd ctermbg=jgreen ctermfg=jblack cterm=NONE
-    hi DiffChange ctermbg=jorange ctermfg=jblack cterm=NONE
+    hi DiffAdd ctermbg=jgreen ctermfg=NONE cterm=NONE
+    hi DiffChange ctermbg=jorange ctermfg=NONE cterm=NONE
     hi DiffDelete ctermbg=jred ctermfg=white cterm=NONE
     hi DiffText ctermbg=NONE ctermfg=white cterm=NONE
     hi IncSearch ctermbg=jgreen ctermfg=black cterm=NONE
-    hi Search ctermbg=jpurple ctermfg=jblack cterm=NONE
+    hi Search ctermbg=jpurple ctermfg=NONE cterm=NONE
     hi Directory ctermbg=NONE ctermfg=jpurple cterm=NONE
     hi MatchParen ctermbg=NONE ctermfg=white cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=white cterm=NONE
@@ -130,7 +130,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi ColorColumn ctermbg=NONE ctermfg=white cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=white cterm=NONE
     hi ErrorMsg ctermbg=NONE ctermfg=jred cterm=NONE
-    hi ModeMsg ctermbg=jpurple ctermfg=jblack cterm=NONE
+    hi ModeMsg ctermbg=jpurple ctermfg=NONE cterm=NONE
     hi MoreMsg ctermbg=NONE ctermfg=white cterm=NONE
     hi Question ctermbg=NONE ctermfg=white cterm=NONE
     hi Cursor ctermbg=white ctermfg=white cterm=NONE
